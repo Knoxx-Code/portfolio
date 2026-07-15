@@ -4,6 +4,10 @@ function toggleFinding(btn){
   btn.textContent = open ? '– hide technical detail' : '+ show technical detail';
 }
 
+document.querySelectorAll('.finding-toggle').forEach(btn=>{
+  btn.addEventListener('click', ()=> toggleFinding(btn));
+});
+
 /* ---------------- Live recon hero ---------------- */
 (async function(){
   const out = document.getElementById('reconOutput');

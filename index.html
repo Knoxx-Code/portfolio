@@ -131,7 +131,7 @@
       <div class="finding-meta">
         <span class="chip">Burp Suite</span><span class="chip">OWASP API Top 10</span><span class="chip">Black-Box</span><span class="chip">REST API</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">Role escalation:</span> a PATCH to <code>/api/user/me</code> accepted an unvalidated <code>role: admin</code> field — any authenticated user could self-promote to administrator with one request.<br><br>
         <span class="l">Payment manipulation:</span> the payment flow trusted a client-supplied <code>amount</code> field. A purchase was completed for Ksh. 1 by intercepting and modifying the request before it reached the backend.<br><br>
@@ -150,7 +150,7 @@
       <div class="finding-meta">
         <span class="chip">SQLMap</span><span class="chip">Burp Suite</span><span class="chip">Nuclei</span><span class="chip">Dirsearch</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">Auth bypass:</span> <code>admin' OR 1=1 --</code> against login forms on both ASP and ASP.NET targets granted full authentication bypass.<br><br>
         <span class="l">Full DB dump:</span> automated SQLi via SQLMap against <code>showforum.asp?id=</code> and <code>artists.php?artist=</code> exposed complete user tables, including plaintext-adjacent credential hashes.<br><br>
@@ -169,7 +169,7 @@
       <div class="finding-meta">
         <span class="chip">AWS CLI</span><span class="chip">IAM</span><span class="chip">S3</span><span class="chip">EC2 Metadata (SSRF)</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">L1–L2:</span> public and "any authenticated AWS user" S3 bucket permissions exposed secret files with no authorisation checks.<br><br>
         <span class="l">L3:</span> a bucket's exposed <code>.git</code> history contained a deleted-but-recoverable commit with a live AWS access key and secret.<br><br>
@@ -188,7 +188,7 @@
       <div class="finding-meta">
         <span class="chip">LFI</span><span class="chip">Ghidra</span><span class="chip">FFUF</span><span class="chip">Reverse Engineering</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">Recon:</span> an HTML comment on the login page hinted the Werkzeug debugger PIN lived in a user's bash history.<br><br>
         <span class="l">LFI:</span> a deprecated <code>v1</code> API endpoint (still live after a v2 migration) exposed an undocumented <code>show</code> parameter vulnerable to path traversal, leaking the bash history and the debug PIN.<br><br>
@@ -207,7 +207,7 @@
       <div class="finding-meta">
         <span class="chip">CVE-2020-35846</span><span class="chip">CVE-2021-22204</span><span class="chip">Metasploit</span><span class="chip">Privilege Escalation</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">Fingerprint:</span> directory busting exposed <code>package.json</code>, revealing Cockpit CMS v0.11.1 — vulnerable to CVE-2020-35846 username enumeration.<br><br>
         <span class="l">Foothold:</span> a malicious PHP file uploaded through the Cockpit interface returned a reverse shell as <code>www-data</code>.<br><br>
@@ -226,7 +226,7 @@
       <div class="finding-meta">
         <span class="chip">CVE-2019-9053</span><span class="chip">SQL Injection</span><span class="chip">GTFOBins</span>
       </div>
-      <button class="finding-toggle" onclick="toggleFinding(this)">+ show technical detail</button>
+      <button class="finding-toggle">+ show technical detail</button>
       <div class="finding-detail">
         <span class="l">Recon:</span> anonymous FTP access and directory busting identified CMS Made Simple v2.2.8, vulnerable to CVE-2019-9053 SQL injection.<br><br>
         <span class="l">Credential recovery:</span> a public exploit dumped the salted password hash; cracked offline against <code>rockyou.txt</code> to recover valid SSH credentials.<br><br>
