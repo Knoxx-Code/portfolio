@@ -16,7 +16,6 @@ document.querySelectorAll('.finding-toggle').forEach(btn=>{
   let isBrave = false;
   try{
     isBrave = !!(navigator.brave && await navigator.brave.isBrave());
-    console.log('Is Brave:', isBrave);
   }catch(e){ isBrave = false; }
 
   function parseUA(isBrave){
