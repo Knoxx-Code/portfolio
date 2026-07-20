@@ -1,4 +1,4 @@
-  :root{
+:root{
     --bg:#0a0a0a;
     --surface:#121212;
     --surface-raised:#171717;
@@ -210,8 +210,9 @@
   @media (max-width:700px){.cert-grid{grid-template-columns:1fr;}}
   .cert{
     display:flex; align-items:center; gap:14px; background:var(--surface); border:1px solid var(--border);
-    border-radius:6px; padding:16px 18px;
+    border-radius:6px; padding:16px 18px; text-decoration:none; transition:border-color 0.2s, transform 0.2s;
   }
+  .cert[href]:hover{border-color:var(--border-red); transform:translateY(-1px);}
   .cert-badge{
     width:38px; height:38px; border-radius:6px; background:var(--surface-raised); border:1px solid var(--border-red);
     display:flex; align-items:center; justify-content:center; font-family:var(--mono); color:var(--red); font-weight:700; flex-shrink:0;
@@ -229,6 +230,7 @@
     transition:border-color 0.2s;
   }
   .clink:hover{border-color:var(--red); color:var(--red);}
+  .clink-icon{width:16px; height:16px; flex-shrink:0;}
 
   footer{
     text-align:center; padding:36px 24px; font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
